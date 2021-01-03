@@ -1,0 +1,22 @@
+class Participant:
+    """
+    Object representing a participant in the christmas draw. If has 2 attributes
+    the participants name and a black list.
+
+    Attributes:
+        name: string representing the name of the participant.
+        black_list: set of participant names who this participant cannot be
+                    paired with.
+    """
+    def __init__(self, name):
+        self.name = name
+        self.black_list = set()
+
+    def append_black_list(self, participant):
+        """
+        Add a participants name to this participants black list
+        :param participant: a Participant object
+        :return: None
+        """
+
+        self.black_list.add(participant.name)
